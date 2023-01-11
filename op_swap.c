@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:36:51 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/07 10:38:12 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:19:52 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	op_ss(t_list **stack_a, t_list **stack_b)
 
 
 
-void	op_swap_learn(t_list **stack_a)
+/* void	op_swap_learn(t_list **stack_a)
 // stack_a -> double pointer to the head of the linked list
 {
 	// create temporary pointer to the first node
@@ -63,3 +63,4 @@ void	op_swap_learn(t_list **stack_a)
 	(*stack_a)->next = temp;
 	ft_printf("sa\n");
 }
+ */

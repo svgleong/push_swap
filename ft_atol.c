@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/11 11:53:18 by svalente         ###   ########.fr       */
+/*   Created: 2023/01/11 12:47:34 by svalente          #+#    #+#             */
+/*   Updated: 2023/01/11 14:15:17 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+long	ft_atol(const char *str)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	long	res;
+	long	sign;
+	long	i;
 
-	if (rules_checker(ac, av) == false)
-		return(0);
-	stack_a = NULL;
-	stack_b = NULL;
-	create_list(ac, av, stack_a);
+	res = 0;
+	sign = 1;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - 48;
+		i++;
+		if ((res * sign) > INT_MAX || (res * sign) < INT_MIN)
+			return (3737373737);
+	}
+	return (sign * res);
 }

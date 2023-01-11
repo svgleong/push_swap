@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   create.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:30:08 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/09 11:25:22 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:49:03 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* void	create_list(int ac, char **av, t_list *stack)
+void	create_list(int ac, char **av, t_list *stack)
 {
 	int	i;
 
@@ -22,9 +22,9 @@
 		ft_lstadd_back(stack, ft_lstnew(ft_atoi(av[i])));
 		i++;
 	}
-} */
+}
 
-int	*create_array(int ac, char **av)
+/* int	*create_array(int ac, char **av)
 {
 	int	*array;
 	int	i;
@@ -58,7 +58,7 @@ int	main(int ac, char **av)
 		printf("%d ", array[i]);
 		i++;
 	}
-}
+} */
 
 /* int	*create_array2(t_list *stack)
 {
