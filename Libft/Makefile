@@ -6,7 +6,7 @@
 #    By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 14:36:05 by svalente          #+#    #+#              #
-#    Updated: 2022/11/16 16:11:02 by svalente         ###   ########.fr        #
+#    Updated: 2023/01/12 14:05:53 by svalente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ ft_strmapi ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd\
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast\
 ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap\
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar rcs

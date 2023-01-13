@@ -6,74 +6,58 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:30:08 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/11 11:49:03 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/13 12:49:06 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	create_list(int ac, char **av, t_list *stack)
+static void		add_back(t_stack **lst, t_stack *new);
+static t_stack	*last_node(t_stack *lst);
+static t_stack	*new_node(int content);
+
+void	create_list(int ac, char **av, t_stack **stack)
 {
 	int	i;
 
 	i = 1;
-	while(i < ac)
-	{
-		ft_lstadd_back(stack, ft_lstnew(ft_atoi(av[i])));
-		i++;
-	}
-}
-
-/* int	*create_array(int ac, char **av)
-{
-	int	*array;
-	int	i;
-	int	j;
-
-	array = (int *)malloc(sizeof(int) * (ac - 1));
-	if (!array)
-		return (0);
-	i = 1;
-	j = 0;
 	while (i < ac)
 	{
-		if (av[i] == )
-			array[j] = 0;
-		else		
-			array[j] = ft_atoi(av[i]);
-		j++;
+		add_back(stack, new_node(ft_atoi(av[i])));
 		i++;
 	}
-	array[j] = '\0';
-	return (array);
 }
 
-int	main(int ac, char **av)
+static t_stack	*new_node(int content)
 {
-	int i = 0;
-	int *array = create_array(ac, av);
-	
-	while (array[i])
-	{
-		printf("%d ", array[i]);
-		i++;
-	}
-} */
+	t_stack	*new;
 
-/* int	*create_array2(t_list *stack)
+	new = malloc(sizeof(t_stack));
+	if (!new)
+		return (0);
+	new->content = content;
+	new->next = NULL;
+	return (new);
+}
+
+static t_stack	*last_node(t_stack *lst)
 {
-	int	size;
-	int	i;
-	int	*array;
+	if (!lst)
+		return (0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
+}
 
-	size = ft_lstsize(stack);
-	i = 0;
-	array = malloc(sizeof(int) * size);
-	while (i < size)
+static void	add_back(t_stack **lst, t_stack *new)
+{
+	t_stack	*last;
+
+	if (!*lst)
 	{
-		array[i] = stack->content;
-		stack = stack->next;
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (array);
-} */
+	last = last_node(*lst);
+	last->next = new;
+}
