@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 15:43:52 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:46:58 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ void	print_list(t_stack *lst)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
+ 	t_stack	*stack_b;
 
 	stack_a = NULL;
-	stack_b = NULL;
-/* 	if (rules_checker(ac, av) == false)
-		return (0); */
+ 	stack_b = NULL;
+	if (rules_checker(ac, av) == false)
+		return (0);
 	create_list(ac, av, &stack_a);
 	printf("stack_a: ");
 	print_list(stack_a);
