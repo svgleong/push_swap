@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   find_smallest_int.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 14:55:37 by svalente         ###   ########.fr       */
+/*   Created: 2023/01/18 15:16:53 by svalente          #+#    #+#             */
+/*   Updated: 2023/01/18 15:32:19 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_list(t_stack *lst)
+int	find_smallest_int(t_stack **stack)
 {
-	t_stack *tmp = lst;
+	int		nb;
+	t_stack	*temp;
 	
-	while(tmp)
+	temp = *stack;
+	nb = (*stack)->content;
+	while ((*stack)->next)
 	{
-		printf("[%d] ", tmp->content);
-		tmp = tmp->next;
+		if (nb > (*stack)->next->content)
+			nb = (*stack)->next->content;
+		*stack = (*stack)->next;
 	}
-	printf("\n");
+	*stack = temp;
+	return (nb);
 }
 
-int	main(int ac, char **av)
+int	lstsize(t_stack *lst)
 {
-	t_stack	*stack_a;
- 	t_stack	*stack_b;
+	int	size;
 
-	stack_a = NULL;
- 	stack_b = NULL;
-	if (rules_checker(ac, av) == false)
-		return (0);
-	create_list(ac, av, &stack_a);
-	printf("stack_a:\t");
-	print_list(stack_a);
-	printf("smallest:\t[%d]\n", find_smallest_int(&stack_a));
+	size = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
 }

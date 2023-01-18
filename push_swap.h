@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 15:43:35 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:32:39 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,15 @@ void	op_rrr(t_stack **stack_a, t_stack **stack_b);
 
 void	create_list(int ac, char **av, t_stack **list);
 long	ft_atol(const char *str);
+int		ft_atoi(const char *str);
 bool	check_num(int ac, char **av);
 bool	check_limits(int ac, char **av);
 bool	check_dup(int ac, char **av);
 bool	rules_checker(int ac, char **av);
 
+int		lstsize(t_stack *lst)
+int		find_smallest_int(t_stack **stack);
 void	sort_3(t_stack **stack_a);
+void	sort_5(t_stack **stack_a, t_stack **stack_b)
 
 #endif
