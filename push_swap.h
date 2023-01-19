@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 15:32:39 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:27:19 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct s_stack
 	int				content;
 	struct s_stack	*next;
 }	t_stack;
+
+void	print_list(t_stack *lst);
 
 void	op_swap(t_stack **head);
 void	op_sa(t_stack **stack_a);
@@ -51,9 +53,9 @@ bool	check_limits(int ac, char **av);
 bool	check_dup(int ac, char **av);
 bool	rules_checker(int ac, char **av);
 
-int		lstsize(t_stack *lst)
+int		lstsize(t_stack *lst);
 int		find_smallest_int(t_stack **stack);
 void	sort_3(t_stack **stack_a);
-void	sort_5(t_stack **stack_a, t_stack **stack_b)
+void	sort_5(t_stack **stack_a, t_stack **stack_b);
 
 #endif

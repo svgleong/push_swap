@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 12:33:24 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:37:43 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ bool	rules_checker(int ac, char **av)
 			if (check_limits(ac, av))
 				if (check_dup(ac, av))
 					return (true);
+	ft_printf("Error\n");
 	return (false);
 }

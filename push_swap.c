@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 14:55:37 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:59:55 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,17 @@ int	main(int ac, char **av)
 	if (rules_checker(ac, av) == false)
 		return (0);
 	create_list(ac, av, &stack_a);
-	printf("stack_a:\t");
+/* 	printf("stack_a:\t");
 	print_list(stack_a);
-	printf("smallest:\t[%d]\n", find_smallest_int(&stack_a));
+	printf("stack_b:\t");
+	print_list(stack_b); */
+
+	/* op_rra(&stack_a); */
+	
+	sort_5(&stack_a, &stack_b);
+	
+/* 	printf("stack_a:\t");
+	print_list(stack_a);
+	printf("stack_b:\t");
+	print_list(stack_b); */
 }

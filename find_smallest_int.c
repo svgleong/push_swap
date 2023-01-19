@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:16:53 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 15:32:19 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:46:25 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 int	find_smallest_int(t_stack **stack)
 {
 	int		nb;
+	int		i;
 	t_stack	*temp;
 	
+	i = 0;
 	temp = *stack;
 	nb = (*stack)->content;
 	while ((*stack)->next)
@@ -26,7 +28,13 @@ int	find_smallest_int(t_stack **stack)
 		*stack = (*stack)->next;
 	}
 	*stack = temp;
-	return (nb);
+	while ((*stack) && nb != (*stack)->content)
+	{
+		i++;
+		*stack = (*stack)->next;
+	}
+	*stack = temp;
+	return (i);
 }
 
 int	lstsize(t_stack *lst)

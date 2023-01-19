@@ -6,14 +6,14 @@
 #    By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 10:43:40 by svalente          #+#    #+#              #
-#    Updated: 2023/01/18 12:59:05 by svalente         ###   ########.fr        #
+#    Updated: 2023/01/19 14:48:01 by svalente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 SRC = create ft_atol op_push op_rev_rotate op_rotate op_swap\
-push_swap rules_checker sort_3 sort_5\
+push_swap rules_checker sort_3 sort_5 find_smallest_int\
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
