@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:23:35 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 12:58:24 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:23:52 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	sort_3(t_stack **stack_a)
 static void	op_sa_rra(t_stack **stack_a)
 {
 	op_sa(stack_a);
-	op_rra(stack_a);	
+	op_rra(stack_a);
 }
 
 static void	op_sa_ra(t_stack **stack_a)

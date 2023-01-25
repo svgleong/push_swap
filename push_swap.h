@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/19 16:27:19 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:50:56 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-void	print_list(t_stack *lst);
+void	print_list(t_stack *lst); //apagar!
 
 void	op_swap(t_stack **head);
 void	op_sa(t_stack **stack_a);
@@ -54,8 +54,19 @@ bool	check_dup(int ac, char **av);
 bool	rules_checker(int ac, char **av);
 
 int		lstsize(t_stack *lst);
+t_stack	*new_node(int content);
 int		find_smallest_int(t_stack **stack);
+int		find_next_smallest(int value, t_stack **stack);
+int		find_midpoint_value_a(t_stack **stack);
+int		send_until_mid_a(t_stack **stack_a, t_stack **stack_b);
+int		find_midpoint_value_b(t_stack **stack, int chunk_size);
+void	send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size);
+int		value_at_i(t_stack **stack);
+int		value_at_last(t_stack **stack);
+int		check_order(t_stack **stack);
 void	sort_3(t_stack **stack_a);
 void	sort_5(t_stack **stack_a, t_stack **stack_b);
+void	sort_long(t_stack **stack_a, t_stack **stack_b);
+void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_smallest_int.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:16:53 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/19 16:46:25 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:49:19 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	find_smallest_int(t_stack **stack)
 	int		nb;
 	int		i;
 	t_stack	*temp;
-	
+
 	i = 0;
 	temp = *stack;
 	nb = (*stack)->content;
@@ -37,15 +37,21 @@ int	find_smallest_int(t_stack **stack)
 	return (i);
 }
 
-int	lstsize(t_stack *lst)
+/* int	find_biggest_int(t_stack **stack)
 {
-	int	size;
+	int		nb;
+	t_stack	*temp;
 
-	size = 0;
-	while (lst)
+	temp = *stack;
+	nb = (*stack)->content;
+	while ((*stack)->next)
 	{
-		lst = lst->next;
-		size++;
+		if (nb < (*stack)->next->content)
+			nb = (*stack)->next->content;
+		*stack = (*stack)->next;
 	}
-	return (size);
-}
+	*stack = temp;
+	return (nb);
+} */
+
+

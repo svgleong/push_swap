@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:30:08 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 12:49:06 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:49:34 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static void		add_back(t_stack **lst, t_stack *new);
 static t_stack	*last_node(t_stack *lst);
-static t_stack	*new_node(int content);
 
 void	create_list(int ac, char **av, t_stack **stack)
 {
@@ -26,18 +25,6 @@ void	create_list(int ac, char **av, t_stack **stack)
 		add_back(stack, new_node(ft_atoi(av[i])));
 		i++;
 	}
-}
-
-static t_stack	*new_node(int content)
-{
-	t_stack	*new;
-
-	new = malloc(sizeof(t_stack));
-	if (!new)
-		return (0);
-	new->content = content;
-	new->next = NULL;
-	return (new);
 }
 
 static t_stack	*last_node(t_stack *lst)
