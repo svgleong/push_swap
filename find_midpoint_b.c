@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 23:45:36 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/25 00:07:41 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:19:03 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	find_smallest_in_chunk(t_stack **stack, int chunk_size)
 
 	counter = 0;
 	nb = (*stack)->content;
+	temp = *stack;
 	while((*stack)->next && counter < chunk_size)
 	{
 		if (nb > (*stack)->next->content)
@@ -49,27 +50,39 @@ int	find_midpoint_value_b(t_stack **stack, int chunk_size)
 }
 
 
-void	send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size)
+int	send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size, int value)
 {
 	int	midpoint;
-	int	value;
+/* 	int	value; */
+	int moves;
 
 	midpoint = find_midpoint_value_b(stack_b, chunk_size);
-	value = 0;
-	while (*stack_b && value <= chunk_size)
+/* 	value = 0; */
+	printf("value [%d]\n", value);
+	moves = 0;
+	while (*stack_b && value < chunk_size / 2 && lstsize(*stack_b) > 2)
 	{
 		if ((*stack_b)->content > midpoint)
 		{
 			op_pa(stack_a, stack_b);
 			value++;
-			printf("counter: [%d]\n", value);
+			printf("value send until mid: [%d]\n", value);
 		}
-		if ((*stack_b)->content >= midpoint)
+		if ((*stack_b)->content <= midpoint)
 		{
-			if (value_at_last(stack_b) < midpoint)
-				op_rrb(stack_b);
-			/* if (*stack_b && (*stack_b)->content >= midpoint)
-				op_rb(stack_b); */
+			if (*stack_b && (*stack_b)->content >= midpoint)
+			{
+				printf("entrei\n");
+				op_rb(stack_b);
+				moves++;
+			}
 		}
 	}
+		printf("stack_aa:\t");
+		print_list(*stack_a);
+		printf("stack_bb:\t");
+		print_list(*stack_b);
+/* 	while (moves-- > 0)
+		op_rrb(stack_b); */
+	return (value);
 }
