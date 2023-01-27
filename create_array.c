@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_array.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:20:34 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 14:53:20 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:06:27 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,9 @@ int	*create_array(t_stack **stack)
 	array = malloc(sizeof(int) * (lstsize(*stack)));
 	while (i < lstsize(*stack) - 1)
 	{
-		array[i] = value;
-		printf("array[%d]: [%d]\n", i, array[i]);
+		array[i++] = value;
 		value = find_next_smallest(value, stack);
 		printf("array[%d]: [%d]\n", i, array[i]);
-		i++;
 	}
 	array[i] = '\0';
 	return (array);
