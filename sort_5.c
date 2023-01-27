@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:45:35 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/21 21:45:08 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:18:21 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,3 @@ static void	move_smallest_of_4(t_stack **stack_a, t_stack **stack_b)
 			op_rra(stack_a);
 	op_pb(stack_a, stack_b);
 }
-

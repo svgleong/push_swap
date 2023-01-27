@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/26 22:14:17 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 14:44:58 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int		lstsize(t_stack *lst);
 t_stack	*new_node(int content);
 int		find_smallest_int(t_stack **stack);
 int		find_next_smallest(int value, t_stack **stack);
+int		*create_array(t_stack **stack);
 int		find_midpoint_value_a(t_stack **stack);
 int		send_until_mid_a(t_stack **stack_a, t_stack **stack_b);
 int		find_midpoint_value_b(t_stack **stack, int chunk_size);

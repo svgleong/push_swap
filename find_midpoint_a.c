@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_midpoint_a.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:18:22 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/24 23:50:36 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:27:57 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,6 @@ int	find_midpoint_value_a(t_stack **stack)
 /* 		printf("counter: [%d]\n", counter); */
 	}
 	return (value);
-}
-
-int	find_next_smallest(int value, t_stack **stack)
-{
-	int		nb;
-	t_stack	*temp;
-
-	temp = *stack;
-	nb = INT_MAX;
-	/* printf("value sent: [%d]\n", value); */
-	while ((*stack))
-	{
-/* 		printf("nb1: [%d]\n", nb);
-		printf("stack content1: [%d]\n", (*stack)->content); */
-		if (nb > (*stack)->content && (*stack)->content > value)
-		{
-			/* printf("entrei stack content2: [%d]\n", (*stack)->content); */
-			nb = (*stack)->content;
-			/* printf("nb2: [%d]\n", nb); */
-		}
-		*stack = (*stack)->next;
-	}
-	*stack = temp;
-	return (nb);
 }
 
 int	send_until_mid_a(t_stack **stack_a, t_stack **stack_b)

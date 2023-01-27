@@ -87,7 +87,9 @@
 		printf("Not working for sure");
 }
  */
-/* int	*create_array(int ac, char **av)
+
+/* #include "push_swap.h"
+int	*create_array(int ac, char **av)
 {
 	int	*array;
 	int	i;
@@ -100,10 +102,9 @@
 	j = 0;
 	while (i < ac)
 	{
-		if (av[i] == )
-			array[j] = 0;
-		else		
-			array[j] = ft_atoi(av[i]);
+		if (av[i] == "0")
+			array[j] = "0";		
+		array[j] = ft_atoi(av[i]);
 		j++;
 		i++;
 	}
