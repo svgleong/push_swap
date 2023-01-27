@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:18:22 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 12:27:57 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:15:50 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	find_midpoint_value_a(t_stack **stack)
 
 	mid = lstsize(*stack) / 2;
 	counter = 0;
-	value = value_at_i(stack);
+	value = value_smallest_int(stack);
 /* 	printf("smallest value: [%d]\n", value); */
 	while (counter < mid)
 	{
@@ -59,7 +59,7 @@ int	send_until_mid_a(t_stack **stack_a, t_stack **stack_b)
 	return (value);
 }
 
-int	value_at_i(t_stack **stack)
+int	value_smallest_int(t_stack **stack)
 {
 	int 	i;
 	int 	j;

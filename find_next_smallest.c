@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:23:17 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 14:51:58 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:11:15 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	find_next_smallest(int value, t_stack **stack)
 	t_stack	*temp;
 
 	temp = *stack;
-	nb = 2147483648;
+	nb = INT_MAX;
 	/* printf("value sent: [%d]\n", value); */
 	while ((*stack))
 	{

@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 14:44:58 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:15:13 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		find_midpoint_value_a(t_stack **stack);
 int		send_until_mid_a(t_stack **stack_a, t_stack **stack_b);
 int		find_midpoint_value_b(t_stack **stack, int chunk_size);
 int		send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size, int value);
-int		value_at_i(t_stack **stack);
+int		value_smallest_int(t_stack **stack);
 int		value_at_last(t_stack **stack);
 int		check_order(t_stack **stack);
 void	sort_3(t_stack **stack_a);
