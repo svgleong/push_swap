@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 23:45:36 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/26 22:19:03 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:07:18 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int	send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size, int v
 	moves = 0;
 	while (*stack_b && value < chunk_size / 2 && lstsize(*stack_b) > 2)
 	{
+		/* printf("what\n"); */
 		if ((*stack_b)->content > midpoint)
 		{
 			op_pa(stack_a, stack_b);
@@ -70,7 +71,7 @@ int	send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size, int v
 		}
 		if ((*stack_b)->content <= midpoint)
 		{
-			if (*stack_b && (*stack_b)->content >= midpoint)
+			if (*stack_b && (*stack_b)->content <= midpoint)
 			{
 				printf("entrei\n");
 				op_rb(stack_b);

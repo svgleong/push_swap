@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:15:49 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/26 22:19:53 by svalente         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:17:46 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ void	sort_long(t_stack **stack_a, t_stack **stack_b)
 	{
 		counter = 0;
 		printf("chunk size int: [%d]\n", chunk_sizes->content);
-		while (chunk_sizes && counter < chunk_sizes->content)
+		while (chunk_sizes && counter <= chunk_sizes->content / 2)
 		{
 			printf("chunk_size: [%d]\n", chunk_sizes->content);
-			printf("counteeeeer [%d]\n", counter);
+			printf("counter [%d]\n", counter);
 			if (counter < chunk_sizes->content && chunk_sizes->content == 1)
 			{
 				op_pa(stack_a, stack_b);
@@ -60,6 +60,7 @@ void	sort_long(t_stack **stack_a, t_stack **stack_b)
 				if ((*stack_b)->content < (*stack_b)->next->content)
 					op_sb(stack_b);
 				op_pa(stack_a, stack_b);
+				counter++;
 				op_pa(stack_a, stack_b);
 				counter++;
 			}
@@ -67,15 +68,17 @@ void	sort_long(t_stack **stack_a, t_stack **stack_b)
 			else if (counter < chunk_sizes->content && chunk_sizes->content > 2 && lstsize(*stack_b) > 2)
 			{
 				printf("entrei1 e counter [%d]\n", counter);
-				while (counter < chunk_sizes->content)
+				while (counter < chunk_sizes->content / 2 && lstsize(*stack_b) > 2)
 				{
 					printf("entrei2 e counter [%d]\n", counter);
-					printf("counteeer: [%d]\n", counter);
+					printf("counter1: [%d]\n", counter);
 					counter = send_until_mid_b(stack_a, stack_b, chunk_sizes->content, counter); 
-					printf("counteeer2: [%d]\n", counter);
+					printf("counter2: [%d]\n", counter);
 				}	
 			}
 			else
+				break ;
+			if (lstsize(*stack_b) == 3)
 				break ;
 			printf("stack_a:\t");
 			print_list(*stack_a);
