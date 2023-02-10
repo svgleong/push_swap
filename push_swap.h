@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 17:15:13 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:50:46 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ typedef struct s_stack
 	int				content;
 	struct s_stack	*next;
 }	t_stack;
+
+typedef struct s_chunk
+{
+	int	beg;
+	int	end;
+	int index_beg;
+	int index_end;
+}	t_chunk;
 
 void	print_list(t_stack *lst); //apagar!
 

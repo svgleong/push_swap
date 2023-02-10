@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rules_checker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/19 14:37:43 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:37:38 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ bool	check_dup(int ac, char **av)
 
 bool	rules_checker(int ac, char **av)
 {
+	if (ac == 1)
+		return (false);
 	if (ac != 1)
 		if (check_num(ac, av))
 			if (check_limits(ac, av))

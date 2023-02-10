@@ -6,92 +6,13 @@
 /*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:15:49 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 11:17:46 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:27:40 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	add_front(t_stack **lst, t_stack *new);
-
-void	sort_long(t_stack **stack_a, t_stack **stack_b)
-{	
-	t_stack	*chunk_sizes;
-	int		counter;
-
-	chunk_sizes = NULL;
-	counter = 0;
-	while (lstsize(*stack_a) > 2)
-	{
-		add_front(&chunk_sizes, new_node(send_until_mid_a(stack_a, stack_b)));
-		printf("stack_a:\t");
-		print_list(*stack_a);
-		printf("stack_b:\t");
-		print_list(*stack_b);
-	}
-	
-	if ((*stack_a)->content > (*stack_a)->next->content)
-		op_sa(stack_a);
-	printf("stack_a:\t");
-	print_list(*stack_a);
-	printf("stack_b:\t");
-	print_list(*stack_b);
-	printf("finished stack a\n\n");
-	printf("chunk sizes:\t");
-	print_list(chunk_sizes);
-
-	
-	while (chunk_sizes)
-	{
-		counter = 0;
-		printf("chunk size int: [%d]\n", chunk_sizes->content);
-		while (chunk_sizes && counter <= chunk_sizes->content / 2)
-		{
-			printf("chunk_size: [%d]\n", chunk_sizes->content);
-			printf("counter [%d]\n", counter);
-			if (counter < chunk_sizes->content && chunk_sizes->content == 1)
-			{
-				op_pa(stack_a, stack_b);
-				printf("entrei e counter [%d]\n", counter);
-				counter++;
-			}
-			else if (counter < chunk_sizes->content && chunk_sizes->content == 2)
-			{
-				if ((*stack_b)->content < (*stack_b)->next->content)
-					op_sb(stack_b);
-				op_pa(stack_a, stack_b);
-				counter++;
-				op_pa(stack_a, stack_b);
-				counter++;
-			}
-		
-			else if (counter < chunk_sizes->content && chunk_sizes->content > 2 && lstsize(*stack_b) > 2)
-			{
-				printf("entrei1 e counter [%d]\n", counter);
-				while (counter < chunk_sizes->content / 2 && lstsize(*stack_b) > 2)
-				{
-					printf("entrei2 e counter [%d]\n", counter);
-					printf("counter1: [%d]\n", counter);
-					counter = send_until_mid_b(stack_a, stack_b, chunk_sizes->content, counter); 
-					printf("counter2: [%d]\n", counter);
-				}	
-			}
-			else
-				break ;
-			if (lstsize(*stack_b) == 3)
-				break ;
-			printf("stack_a:\t");
-			print_list(*stack_a);
-			printf("stack_b:\t");
-			print_list(*stack_b);
-		}
-		chunk_sizes = chunk_sizes->next;
-	}
-}
-
-static void	add_front(t_stack **lst, t_stack *new)
+void	sort_long(t_stack **stack_a, t_stack **stack_b, int size)
 {
-	if (*lst)
-		new->next = *lst;
-	*lst = new;
+	t_chunk chunks[30];
 }
