@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/09 16:50:46 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/15 12:14:43 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,14 @@ t_stack	*new_node(int content);
 int		find_smallest_int(t_stack **stack);
 int		find_next_smallest(int value, t_stack **stack);
 int		*create_array(t_stack **stack);
-int		find_midpoint_value_a(t_stack **stack);
-int		send_until_mid_a(t_stack **stack_a, t_stack **stack_b);
-int		find_midpoint_value_b(t_stack **stack, int chunk_size);
-int		send_until_mid_b(t_stack **stack_a, t_stack **stack_b, int chunk_size, int value);
+int		find_mid_value(t_stack **stack);
 int		value_smallest_int(t_stack **stack);
 int		value_at_last(t_stack **stack);
 int		check_order(t_stack **stack);
 void	sort_3(t_stack **stack_a);
 void	sort_5(t_stack **stack_a, t_stack **stack_b);
 void	sort_long(t_stack **stack_a, t_stack **stack_b);
+void	send_to_b(t_stack **stack_a, t_stack **stack_b);
 void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b);
 
 #endif

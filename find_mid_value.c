@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_array.c                                     :+:      :+:    :+:   */
+/*   find_mid_value.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 12:20:34 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/15 11:14:44 by svalente         ###   ########.fr       */
+/*   Created: 2023/02/15 11:12:38 by svalente          #+#    #+#             */
+/*   Updated: 2023/02/15 11:15:20 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	*create_array(t_stack **stack)
+int	find_mid_value(t_stack **stack)
 {
-	int i;
-	int	value;
-	int	*array;
+	int mid;
+	int counter;
+	int value;
 
-	i = 0;
+	mid = lstsize(*stack) / 2;
+	counter = 0;
 	value = value_smallest_int(stack);
-	array = malloc(sizeof(int) * (lstsize(*stack)));
-	while (i < lstsize(*stack))
+/* 	printf("smallest value: [%d]\n", value); */
+	while (counter < mid)
 	{
-		array[i++] = value;
 		value = find_next_smallest(value, stack);
+/* 		printf("next smallest value: [%d]\n", value); */
+		counter++;
+/* 		printf("counter: [%d]\n", counter); */
 	}
-	return (array);
+	return (value);
 }
