@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/15 12:16:12 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:55:58 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,14 @@ int	main(int ac, char **av)
 	print_list(stack_b);
 
 	send_to_b(&stack_a, &stack_b);
+	
+	printf("stack_a:\t");
+	print_list(stack_a);
+	printf("stack_b:\t");
+	print_list(stack_b);
 
+	printf("best:\t[%d]\n", best_neigh(&stack_a, &stack_b)->content);
+	
 	printf("stack_a:\t");
 	print_list(stack_a);
 	printf("stack_b:\t");

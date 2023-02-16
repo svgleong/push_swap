@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_all_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:58:54 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/09 15:28:05 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/16 11:31:30 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

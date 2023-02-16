@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/15 12:14:43 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/16 16:06:15 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	sort_3(t_stack **stack_a);
 void	sort_5(t_stack **stack_a, t_stack **stack_b);
 void	sort_long(t_stack **stack_a, t_stack **stack_b);
 void	send_to_b(t_stack **stack_a, t_stack **stack_b);
+t_stack	*best_neigh(t_stack **stack_a, t_stack **stack_b);
+double	subtract(t_stack **stack_a, t_stack **stack_b);
 void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b);
 
 #endif

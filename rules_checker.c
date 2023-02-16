@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/15 15:47:57 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/16 10:28:36 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,4 @@ bool	rules_checker(int ac, char **av)
 	write(2, "Error\n", 6);
 	return (false);
 }
+	
