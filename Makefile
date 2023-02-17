@@ -6,7 +6,7 @@
 #    By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 10:43:40 by svalente          #+#    #+#              #
-#    Updated: 2023/02/17 10:56:29 by svalente         ###   ########.fr        #
+#    Updated: 2023/02/17 17:32:51 by svalente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ all: $(NAME)
 
 $(NAME): $(SRC:=.o)
 		make -C $(FT_PRINTF_PATH)
-		$(CC) $(CFLAGS) $(SRC:=.o) $(FT_PRINTF) -o $(NAME) 
+		$(CC) $(CFLAGS) $(SRC:=.o) $(FT_PRINTF) -fsanitize=address -o $(NAME) 
 
 clean:
 		$(RM) $(SRC:=.o)

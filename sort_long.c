@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:15:49 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/17 13:47:46 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/17 17:28:21 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,48 +34,46 @@ void	send_to_b(t_stack **stack_a, t_stack **stack_b)
 	sort_3(stack_a);
 }
 
-t_stack	*best_neigh(t_stack **stack_a, t_stack **stack_b)
+t_stack	*best_neigh(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*temp;
 	t_stack *neigh;
 	double diff;
 	
-	temp = *stack_a;
-	neigh = *stack_a;
+	neigh = stack_a;
 	diff = 99999999999;
-	while (*stack_a)
+	while (stack_a)
 	{
 		if (subtract(stack_a, stack_b) < diff && subtract(stack_a, stack_b) > 0)
 		{
 			diff = subtract(stack_a, stack_b);
-			neigh = *stack_a;
+			neigh = stack_a;
 		}
-		*stack_a = (*stack_a)->next;
+		stack_a = stack_a->next;
 	}
-	*stack_a = temp;
 	return (neigh);
 }
 
-double	subtract(t_stack **stack_a, t_stack **stack_b)
+double	subtract(t_stack *stack_a, t_stack *stack_b)
 {
 	double value;
 	
-	if ((*stack_a)->content > (*stack_b)->content)
-		value = (*stack_a)->content - (*stack_b)->content;
+	if (stack_a->content > stack_b->content)
+		value = stack_a->content - stack_b->content;
 	else
-		value = (*stack_b)->content - (*stack_a)->content;
+		value = stack_b->content - stack_a->content;
 	return (value);
 }
 
-int	moves_cost(t_stack **stack, t_stack **elem)
+int	moves_cost(t_stack **stack, t_stack *elem)
 {
-	if (lstsize(*elem) > lstsize(*stack) / 2)
-		return (lstsize(*stack) - lstsize(*elem));
+	if (lstsize(elem) > lstsize(*stack) / 2)
+		return (lstsize(*stack) - lstsize(elem));
 	else
-		return (lstsize(*elem));
+		return (lstsize(elem));
 }
 
-int	best_path(t_stack **st_a, t_stack **st_b, t_stack **elem, t_stack **neigh)
+int	best_path(t_stack *st_a, t_stack *st_b, t_stack *elem, t_stack *neigh)
 {
 	int cost_a;
 	int cost_b;
@@ -90,9 +88,9 @@ int	best_path(t_stack **st_a, t_stack **st_b, t_stack **elem, t_stack **neigh)
 		return (cost_a + cost_b);
 }
 
-int	half(t_stack **stack, t_stack **elem)
+int	half(t_stack **stack, t_stack *elem)
 {
-	if (lstsize(*elem) > lstsize(*stack) / 2)
+	if (lstsize(elem) > lstsize(*stack) / 2)
 		return (0);
 	else
 		return (1);
@@ -110,17 +108,15 @@ t_stack *min_cost(t_stack *stack_a, t_stack *stack_b)
 {
 	int 	min_cost;
 	int		cost;
-	t_stack *temp;
 	t_stack *neigh;
 	t_stack	*elem;
 
 	min_cost = INT_MAX;
-	temp = stack_b;
 	elem = stack_b;
 	while (stack_b)
 	{
-		neigh = best_neigh(&stack_a, &stack_b);
-		cost = best_path(&stack_a, &stack_b, &stack_b, &neigh);
+		neigh = best_neigh(stack_a, stack_b);
+		cost = best_path(stack_a, stack_b, stack_b, neigh);
 		if (cost < min_cost)
 		{
 			min_cost = cost;

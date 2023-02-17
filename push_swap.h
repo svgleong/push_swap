@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/17 13:34:50 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:53:20 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,11 @@ int		check_order(t_stack **stack);
 void	sort_3(t_stack **stack_a);
 void	sort_5(t_stack **stack_a, t_stack **stack_b);
 void	send_to_b(t_stack **stack_a, t_stack **stack_b);
-t_stack	*best_neigh(t_stack **stack_a, t_stack **stack_b);
-double	subtract(t_stack **stack_a, t_stack **stack_b);
-int		moves_cost(t_stack **stack, t_stack **elem);
-int		half(t_stack **stack, t_stack **elem);
-int		best_path(t_stack **st_a, t_stack **st_b, t_stack **elem, t_stack **neigh);
+t_stack	*best_neigh(t_stack *stack_a, t_stack *stack_b);
+double	subtract(t_stack *stack_a, t_stack *stack_b);
+int		moves_cost(t_stack **stack, t_stack *elem);
+int		half(t_stack **stack, t_stack *elem);
+int		best_path(t_stack *st_a, t_stack *st_b, t_stack *elem, t_stack *neigh);
 int		bigger(int cost_a, int cost_b);
 t_stack *min_cost(t_stack *stack_a, t_stack *stack_b);
 void	sort_long(t_stack **stack_a, t_stack **stack_b);
