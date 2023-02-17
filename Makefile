@@ -6,16 +6,15 @@
 #    By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 10:43:40 by svalente          #+#    #+#              #
-#    Updated: 2023/02/16 11:28:33 by svalente         ###   ########.fr        #
+#    Updated: 2023/02/17 10:56:29 by svalente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 SRC = create_list ft_atol op_push op_rev_rotate op_rotate op_swap\
-push_swap rules_checker sort_3 sort_5 find_smallest_int\
+push_swap rules_checker sort_3 sort_5 find\
 sort_all_numbers sort_long lists_functions \
-find_next_smallest find_mid_value\
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

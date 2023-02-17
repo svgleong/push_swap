@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/16 15:55:58 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:46:07 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,41 @@ int	main(int ac, char **av)
 	printf("stack_b:\t");
 	print_list(stack_b);
 
-	printf("best:\t[%d]\n", best_neigh(&stack_a, &stack_b)->content);
+	printf("elem:\t\t [%p]\n", min_cost(stack_a, stack_b));
 	
 	printf("stack_a:\t");
 	print_list(stack_a);
 	printf("stack_b:\t");
 	print_list(stack_b);
 }
+
+/* int	main(int ac, char **av)
+{
+	t_stack	**stack_a;
+	t_stack	**stack_b;
+
+	stack_a = NULL;
+	stack_b = NULL;
+	if (rules_checker(ac, av) == false)
+		return (0);
+	create_list(ac, av, stack_a);
+	printf("stack_a:\t");
+	print_list(*stack_a);
+	printf("stack_b:\t");
+	print_list(*stack_b);
+
+	send_to_b(stack_a, stack_b);
+
+	printf("stack_a:\t");
+	print_list(*stack_a);
+	printf("stack_b:\t");
+	print_list(*stack_b);
+	
+	min_cost(*stack_a, *stack_b);
+
+	printf("stack_a:\t");
+	print_list(*stack_a);
+	printf("stack_b:\t");
+	print_list(*stack_b);
+}
+ */
