@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/17 13:46:07 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:51:03 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,18 @@ int	main(int ac, char **av)
 	printf("stack_b:\t");
 	print_list(stack_b);
 
-	send_to_b(&stack_a, &stack_b);
+	/* printf("find smallest: [%d]\n", find_smallest_int(&stack_a)); */
+
+	sort_all_numbers(ac, &stack_a, &stack_b);
+	/* send_to_b(&stack_a, &stack_b);
+	move_lowest_to_top(&stack_a); */
 	
 	printf("stack_a:\t");
 	print_list(stack_a);
 	printf("stack_b:\t");
 	print_list(stack_b);
 
-	printf("elem:\t\t [%p]\n", min_cost(stack_a, stack_b));
 	
-	printf("stack_a:\t");
-	print_list(stack_a);
-	printf("stack_b:\t");
-	print_list(stack_b);
 }
 
 /* int	main(int ac, char **av)

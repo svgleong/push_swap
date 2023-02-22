@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/17 13:53:20 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:22:37 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdio.h>
 # include <stdbool.h>
 # include <limits.h>
-# include "Libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
 typedef struct s_stack
@@ -80,7 +79,14 @@ int		half(t_stack **stack, t_stack *elem);
 int		best_path(t_stack *st_a, t_stack *st_b, t_stack *elem, t_stack *neigh);
 int		bigger(int cost_a, int cost_b);
 t_stack *min_cost(t_stack *stack_a, t_stack *stack_b);
+void	send_to_a(t_stack **stack_a, t_stack **stack_b);
 void	sort_long(t_stack **stack_a, t_stack **stack_b);
 void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b);
+
+void	all_upper_half(t_stack **stack_a, t_stack **stack_b);
+void	all_lower_half(t_stack **stack_a, t_stack **stack_b);
+void	upper_half(t_stack **stack_a, t_stack **stack_b, char stack);
+void	lower_half(t_stack **stack_a, t_stack **stack_b, char stack);
+void	move_lowest_to_top(t_stack **stack_a);
 
 #endif

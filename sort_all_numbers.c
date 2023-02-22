@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:58:54 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/16 11:31:30 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:54:59 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b)
 		sort_3(stack_a);
 	else if (ac == 5 || ac == 6)
 		sort_5(stack_a, stack_b);
-	/* else if (ac > 6 && check_order(stack_a) == 0)
-		sort_long(stack_a, stack_b); */
+	else if (ac > 6 && check_order(stack_a) == 0)
+		sort_long(stack_a, stack_b);
 }
 
 int	check_order(t_stack **stack)
