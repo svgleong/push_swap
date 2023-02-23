@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:45:35 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/27 12:18:21 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:35:34 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 			move_smallest_of_5(stack_a, stack_b);
 		if (lstsize(*stack_a) == 4)
 			move_smallest_of_4(stack_a, stack_b);
-		sort_3(stack_a);
+		if (check_order(stack_a) == 0)
+			sort_3(stack_a);
 		if (size == 5)
 			op_pa(stack_a, stack_b);
 		op_pa(stack_a, stack_b);
