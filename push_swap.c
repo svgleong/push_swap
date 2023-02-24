@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/23 16:24:40 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:56:05 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,10 @@ int	main(int ac, char **av)
 	/* send_to_b(&stack_a, &stack_b);
 	move_lowest_to_top(&stack_a); */
 	
-	/* printf("stack_a:\t");
+	printf("stack_a:\t");
 	print_list(stack_a);
 	printf("stack_b:\t");
-	print_list(stack_b); */
-
-	
+	print_list(stack_b);
 }
 
 /* int	main(int ac, char **av)

@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:15:49 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/24 19:00:56 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:50:54 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_long(t_stack **stack_a, t_stack **stack_b)
 {
 	send_to_b(stack_a, stack_b);
-/* 	printf("\n\n"); */
+	printf("\n\n");
 	while (lstsize(*stack_b) > 0)
 		send_to_a(stack_a, stack_b);	
 	move_lowest_to_top(stack_a);
@@ -33,10 +33,10 @@ void	send_to_b(t_stack **stack_a, t_stack **stack_b)
 	}
 	if (check_order(stack_a) == 0)
 		sort_3(stack_a);
-	/* printf("send_to_b\t stack_a:\t");
+	printf("send_to_b\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_b\t stack_b:\t");
-	print_list(*stack_b); */
+	print_list(*stack_b);
 }
 
 t_stack	*best_neigh(t_stack *st_a, t_stack *st_b)
@@ -169,10 +169,10 @@ void	send_to_a(t_stack **stack_a, t_stack **stack_b)
 	
 	elem = min_cost(stack_a, stack_b);
 	best = best_neigh(*stack_a, elem);
-	/* printf("elem1: [%d]\n", elem->content);
+	printf("elem1: [%d]\n", elem->content);
 	printf("best1: [%d]\n", best->content);
 	printf("elem half: [%d]\n", elem->half);
-	printf("best half: [%d]\n", best->half); */
+	printf("best half: [%d]\n", best->half);
 	if (best->half == 0 && elem->half == 0)
 		all_upper_half(stack_a, stack_b);
 	else if (best->half == 1 && elem->half == 1)
@@ -188,11 +188,11 @@ void	send_to_a(t_stack **stack_a, t_stack **stack_b)
 		lower_half(stack_a, stack_b, 'b');
 	}
 	op_pa(stack_a, stack_b);
-	/* printf("send_to_a\t stack_a:\t");
+	printf("send_to_a\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_a\t stack_b:\t");
 	print_list(*stack_b);
-	printf("\n"); */
+	printf("\n");
 }
 
 void	all_upper_half(t_stack **stack_a, t_stack **stack_b)
@@ -202,12 +202,12 @@ void	all_upper_half(t_stack **stack_a, t_stack **stack_b)
 	int cost_a;
 	int cost_b;
 	
-	/* printf("all upper\n"); */
+	printf("all upper\n");
 	elem = min_cost(stack_a, stack_b);
 	best = best_neigh(*stack_a, elem);
 	cost_a = moves_cost(stack_a, best);
 	cost_b = moves_cost(stack_b, elem);
-	/* printf("send_to_a\t stack_a:\t");
+	printf("send_to_a\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_a\t stack_b:\t");
 	print_list(*stack_b);
@@ -215,7 +215,7 @@ void	all_upper_half(t_stack **stack_a, t_stack **stack_b)
 	printf("elem: [%d]\n", elem->content);
 	printf("best: [%d]\n", best->content);
 	printf("size stackb: [%d]\tsize: [%d]\n", lstsize(*stack_b), lstsize(elem));
-	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b); */
+	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b);
 	while (cost_a > 0 && cost_b > 0)
 	{
 		op_rr(stack_a, stack_b);
@@ -241,12 +241,12 @@ void	all_lower_half(t_stack **stack_a, t_stack **stack_b)
 	int cost_a;
 	int cost_b;
 	
-	/* printf("all lower\n"); */
+	printf("all lower\n");
 	elem = min_cost(stack_a, stack_b);
 	best = best_neigh(*stack_a, elem);
 	cost_a = moves_cost(stack_a, best);
 	cost_b = moves_cost(stack_b, elem);
-	/* printf("send_to_a\t stack_a:\t");
+	printf("send_to_a\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_a\t stack_b:\t");
 	print_list(*stack_b);
@@ -254,7 +254,7 @@ void	all_lower_half(t_stack **stack_a, t_stack **stack_b)
 	printf("elem: [%d]\n", elem->content);
 	printf("best: [%d]\n", best->content);
 	printf("size stackb: [%d]\tsize: [%d]\n", lstsize(*stack_b), lstsize(elem));
-	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b); */
+	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b);
 	while (cost_a > 0 && cost_b > 0)
 	{
 		op_rrr(stack_a, stack_b);
@@ -280,12 +280,12 @@ void	upper_half(t_stack **stack_a, t_stack **stack_b, char stack)
 	int cost_a;
 	int cost_b;
 	
-	/* printf("upper\n"); */
+	printf("upper\n");
 	elem = min_cost(stack_a, stack_b);
 	best = best_neigh(*stack_a, elem);
 	cost_a = moves_cost(stack_a, best);
 	cost_b = moves_cost(stack_b, elem);
-	/* printf("send_to_a\t stack_a:\t");
+	printf("send_to_a\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_a\t stack_b:\t");
 	print_list(*stack_b);
@@ -293,7 +293,7 @@ void	upper_half(t_stack **stack_a, t_stack **stack_b, char stack)
 	printf("elem: [%d]\n", elem->content);
 	printf("best: [%d]\n", best->content);
 	printf("size stackb: [%d]\tsize: [%d]\n", lstsize(*stack_b), lstsize(elem));
-	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b); */
+	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b);
 	if (stack == 'a')
 	{
 		while (cost_a-- > 0)
@@ -313,12 +313,12 @@ void	lower_half(t_stack **stack_a, t_stack **stack_b, char stack)
 	int cost_a;
 	int cost_b;
 	
-	/* printf("lower\n"); */
+	printf("lower\n");
 	elem = min_cost(stack_a, stack_b);
 	best = best_neigh(*stack_a, elem);
 	cost_a = moves_cost(stack_a, best);
 	cost_b = moves_cost(stack_b, elem);
-	/* printf("send_to_a\t stack_a:\t");
+	printf("send_to_a\t stack_a:\t");
 	print_list(*stack_a);
 	printf("send_to_a\t stack_b:\t");
 	print_list(*stack_b);
@@ -326,7 +326,7 @@ void	lower_half(t_stack **stack_a, t_stack **stack_b, char stack)
 	printf("elem: [%d]\n", elem->content);
 	printf("best: [%d]\n", best->content);
 	printf("size stackb: [%d]\tsize: [%d]\n", lstsize(*stack_b), lstsize(elem));
-	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b); */
+	printf("cost_a: [%d]\ncost_b: [%d]\n", cost_a, cost_b);
 	if (stack == 'a')
 	{
 		while (cost_a-- > 0)

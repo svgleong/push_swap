@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:56:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/23 16:39:19 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:49:39 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef struct s_stack
 {
 	int				content;
+	int				half;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -78,7 +79,7 @@ int		moves_cost(t_stack **stack, t_stack *elem);
 int		half(t_stack **stack, t_stack *elem);
 int		best_path(t_stack *st_a, t_stack *st_b, t_stack *elem, t_stack *neigh);
 int		bigger(int cost_a, int cost_b);
-t_stack *min_cost(t_stack *stack_a, t_stack *stack_b);
+t_stack *min_cost(t_stack **stack_a, t_stack **stack_b);
 void	send_to_a(t_stack **stack_a, t_stack **stack_b);
 void	sort_long(t_stack **stack_a, t_stack **stack_b);
 void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b);
