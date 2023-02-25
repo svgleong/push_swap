@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:47:34 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/18 10:42:08 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 12:37:20 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

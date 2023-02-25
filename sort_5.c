@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:45:35 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/23 17:35:34 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 12:38:25 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	move_smallest_of_4(t_stack **stack_a, t_stack **stack_b);
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-	int size;
+	int	size;
 
 	size = lstsize(*stack_a);
 	if (check_order(stack_a) == 0)
@@ -36,7 +36,7 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 
 static void	move_smallest_of_5(t_stack **stack_a, t_stack **stack_b)
 {
-	int i;
+	int	i;
 
 	i = find_smallest_int(stack_a);
 	if (i <= 2)
@@ -50,8 +50,8 @@ static void	move_smallest_of_5(t_stack **stack_a, t_stack **stack_b)
 
 static void	move_smallest_of_4(t_stack **stack_a, t_stack **stack_b)
 {
-	int i;
-	
+	int	i;
+
 	i = find_smallest_int(stack_a);
 	if (i == 1)
 		op_ra(stack_a);

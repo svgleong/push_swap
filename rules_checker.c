@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rules_checker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/16 10:28:36 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 11:55:44 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	check_num(int ac, char **av)
+int	check_num(int ac, char **av)
 {
 	int	i;
 	int	j;
@@ -28,14 +28,14 @@ bool	check_num(int ac, char **av)
 			if ((av[i][j] >= '0' && av[i][j] <= '9'))
 				j++;
 			else
-				return (false);
+				return (0);
 		}
 		i++;
 	}
-	return (true);
+	return (1);
 }
 
-bool	check_limits(int ac, char **av)
+int	check_limits(int ac, char **av)
 {
 	int	i;
 
@@ -43,13 +43,13 @@ bool	check_limits(int ac, char **av)
 	while (i < ac)
 	{
 		if (ft_atol(av[i]) == 3737373737)
-			return (false);
+			return (0);
 		i++;
 	}
-	return (true);
+	return (1);
 }
 
-bool	check_dup(int ac, char **av)
+int	check_dup(int ac, char **av)
 {
 	int	i;
 	int	j;
@@ -61,24 +61,24 @@ bool	check_dup(int ac, char **av)
 		while (j < ac)
 		{
 			if (ft_atoi(av[i]) == ft_atoi(av[j]))
-				return (false);
+				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (true);
+	return (1);
 }
 
-bool	rules_checker(int ac, char **av)
+int	rules_checker(int ac, char **av)
 {
 	if (ac == 1)
-		return (false);
+		return (0);
 	if (ac != 1)
 		if (check_num(ac, av))
 			if (check_limits(ac, av))
 				if (check_dup(ac, av))
-					return (true);
+					return (1);
 	write(2, "Error\n", 6);
-	return (false);
+	return (0);
 }
 	

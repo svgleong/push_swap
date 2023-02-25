@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   op_rev_rotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 11:11:09 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 12:21:06 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 12:03:37 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	op_rev_rotate(t_stack **head)
+static void	op_rev_rotate(t_stack **head)
 {
 	t_stack	*temp;
 

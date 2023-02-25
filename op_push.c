@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   op_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 20:29:57 by svalente          #+#    #+#             */
-/*   Updated: 2023/01/13 12:21:22 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 12:01:32 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	op_push(t_stack **head1, t_stack **head2)
+static void	op_push(t_stack **head1, t_stack **head2)
 {
 	t_stack	*temp;
 

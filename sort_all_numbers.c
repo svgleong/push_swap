@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_all_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:58:54 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/22 12:54:59 by svalente         ###   ########.fr       */
+/*   Updated: 2023/02/25 12:38:34 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	sort_all_numbers(int ac, t_stack **stack_a, t_stack **stack_b)
 
 int	check_order(t_stack **stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = *stack;
 	while (temp->next)
