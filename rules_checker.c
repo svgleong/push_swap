@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rules_checker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:29 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/25 11:55:44 by svalente         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:55:48 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -6,7 +6,7 @@
 /*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 11:45:10 by svalente          #+#    #+#             */
-/*   Updated: 2023/03/01 16:53:46 by svalente         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:10:53 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 		return (0);
 	create_list(ac, av, &stack_a);
 	checker(&stack_a, &stack_b);
-	if(check_order(&stack_a) == 1)
+	if (check_order(&stack_a) == 1)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
@@ -33,7 +33,7 @@ int	main(int ac, char **av)
 
 void	checker(t_stack **stack_a, t_stack **stack_b)
 {
-	char *line;
+	char	*line;
 
 	line = get_next_line(0);
 	while (line)
