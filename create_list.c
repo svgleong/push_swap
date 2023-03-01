@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:30:08 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/25 12:12:59 by svalente         ###   ########.fr       */
+/*   Updated: 2023/03/01 14:55:50 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:23:31 by svalente          #+#    #+#             */
-/*   Updated: 2023/02/25 13:34:08 by svalente         ###   ########.fr       */
+/*   Updated: 2023/03/01 16:31:40 by svalente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
