@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: svalente <svalente@student.42lisboa.com >  +#+  +:+       +#+         #
+#    By: svalente <svalente@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 10:43:40 by svalente          #+#    #+#              #
-#    Updated: 2023/03/01 16:51:47 by svalente         ###   ########.fr        #
+#    Updated: 2023/03/02 21:42:13 by svalente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ SRC_BONUS = checker_bonus/checker\
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-#INC = -I/usr/include
 
 $(VERBOSE).SILENT: #apagar!!
 
@@ -65,8 +64,7 @@ fclean: clean
 	
 re: fclean all bonus
 
-bonus: $(BONUS_NAME) 
+bonus: all $(BONUS_NAME)
 
 $(BONUS_NAME):	$(SRC_BONUS:=.o)
-				make -C $(FT_PRINTF_PATH)
 				$(CC) $(CFLAGS) $(SRC_BONUS:=.o) $(SRC:=.c) $(FT_PRINTF) -fsanitize=address -o $(BONUS_NAME)
